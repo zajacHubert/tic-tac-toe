@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# React Tic Tac Toe Application with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application using TypeScript, set up with Vite for fast and efficient development. Follow the steps below to download, run, and test the application.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+Make sure you have the following installed:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) (version 6 or higher) or [yarn](https://yarnpkg.com/)
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies:**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+Using npm:
+
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Or using yarn:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn dev
 ```
+
+The application will be available at http://localhost:5173.
+
+### Running tests
+
+To run test, run:
+
+Using npm:
+
+```bash
+npm test
+```
+
+Or using yarn:
+
+```bash
+yarn test
+```
+
+## Assumptions
+
+- **Structure:** The proposed structure aims to facilitate easy expansion and editing of the application, but you can also adopt a different project structure.
+- **Mechanics:** The transitions to subsequent game states are intuitive (e.g., after a reset, it could return to the "idle" state).
+- **Styles:** I used global styles and reusable components, which allows for quick view editing if needed.
+- **Error Handling:** Due to the simplified nature of the task, there are no specific places where errors are expected to occur. Therefore, I proposed potential handling for possible errors in the application.
