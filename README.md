@@ -70,8 +70,8 @@ yarn test
 
 ## Assumptions
 
-- **Structure:** The proposed structure aims to facilitate easy expansion and editing of the application, but you can also adopt a different project structure.
-- **Mechanics:** The transitions to subsequent game states are intuitive (e.g., after a reset, it could return to the "idle" state).
+- **Structure:** Depending on the project, different application structures can be planned. The one I've proposed here allows for easy expansion and maintenance of the application. It ensures clarity and makes it easy to find the resources we are interested in.
+- **Mechanics:** There are various ways to design the mechanics of this application. I have chosen a simple mechanism here that ensures the user can freely use the application and covers all the necessary game processes.
 - **Styles:** I used global styles and reusable components, which allows for quick view editing if needed.
 - **Error Handling:** Due to the simplified nature of the task, there are no specific places where errors are expected to occur. Therefore, I proposed potential handling for possible errors in the application.
 - **UX:** Displaying game state information, highlighting clickable elements, and adding animations for a better user experience.

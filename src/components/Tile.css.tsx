@@ -22,7 +22,7 @@ const signShakeAnimation = keyframes`
 `;
 
 type TileBoxProps = {
-  canClick: boolean;
+  $canClick: boolean;
 };
 
 export const TileBox = styled.div<TileBoxProps>`
@@ -30,19 +30,19 @@ export const TileBox = styled.div<TileBoxProps>`
   justify-content: center;
   align-items: center;
   background: ${({ theme }) => theme.colors.white};
-
-  cursor: ${({ canClick }) => (canClick ? 'pointer' : '')};
+  user-select: none;
+  cursor: ${({ $canClick }) => ($canClick ? 'pointer' : '')};
 `;
 
 type SignProps = {
-  isClicked: boolean;
+  $isClicked: boolean;
 };
 
 export const Sign = styled.p<SignProps>`
   font-size: 10vmin;
 
-  ${({ isClicked }) =>
-    isClicked &&
+  ${({ $isClicked }) =>
+    $isClicked &&
     css`
       animation: ${signShakeAnimation} 0.3s ease;
     `}

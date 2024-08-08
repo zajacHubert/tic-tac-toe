@@ -32,9 +32,9 @@ const Tile = ({ index, onClick, player, isPlayingState }: TileProps) => {
       onClick={handleClick}
       data-player={player}
       data-testid={`tile-${index}`}
-      canClick={isPlayingState}
+      $canClick={isPlayingState}
     >
-      <Sign isClicked={isClicked}>{player}</Sign>
+      <Sign $isClicked={isClicked}>{player}</Sign>
     </TileBox>
   );
 };
