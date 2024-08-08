@@ -16,8 +16,8 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/zajacHubert/tic-tac-toe.git
+   cd tic-tac-toe
    ```
 
 2. **Install dependencies:**
@@ -50,7 +50,7 @@ Or using yarn:
 yarn dev
 ```
 
-The application will be available at http://localhost:5173.
+The application will be available at http://localhost:5173
 
 ### Running tests
 
@@ -74,3 +74,4 @@ yarn test
 - **Mechanics:** The transitions to subsequent game states are intuitive (e.g., after a reset, it could return to the "idle" state).
 - **Styles:** I used global styles and reusable components, which allows for quick view editing if needed.
 - **Error Handling:** Due to the simplified nature of the task, there are no specific places where errors are expected to occur. Therefore, I proposed potential handling for possible errors in the application.
+- **UX:** Displaying game state information, highlighting clickable elements, and adding animations for a better user experience.

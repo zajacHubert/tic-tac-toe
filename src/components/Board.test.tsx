@@ -42,7 +42,9 @@ describe('Board Component Tests', () => {
 
     await waitFor(() => {
       expect(screen.getByText(/winner/i)).toBeInTheDocument();
-      expect(screen.getByText(/x/i)).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { level: 2, name: /x/i })
+      ).toBeInTheDocument();
     });
   });
 

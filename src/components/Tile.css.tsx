@@ -1,13 +1,49 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
-export const TileBox = styled.div`
+const signShakeAnimation = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
+type TileBoxProps = {
+  canClick: boolean;
+};
+
+export const TileBox = styled.div<TileBoxProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vmin;
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
 
-  &::before {
-    content: attr(data-player);
-  }
+  cursor: ${({ canClick }) => (canClick ? 'pointer' : '')};
+`;
+
+type SignProps = {
+  isClicked: boolean;
+};
+
+export const Sign = styled.p<SignProps>`
+  font-size: 10vmin;
+
+  ${({ isClicked }) =>
+    isClicked &&
+    css`
+      animation: ${signShakeAnimation} 0.3s ease;
+    `}
 `;

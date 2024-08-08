@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
  button {
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     cursor: pointer;
  }
 `;

@@ -1,5 +1,5 @@
-import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
+import { ThemeProvider } from 'styled-components';
 import { theme } from './theme/theme';
 import Board from './components/Board';
 

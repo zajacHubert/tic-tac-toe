@@ -1,11 +1,11 @@
 import { useMachine } from '@xstate/react';
 import { ticTacToeMachine } from '../machines/ticTacToeMachine';
-import { range } from '../utils/range';
-import Tile from './Tile';
 import GameStatus from './GameStatus';
+import Tile from './Tile';
+import { range } from '../utils/range';
+import { EventTypes, GameStates } from '../types';
 import { BoxBoard, Container, BoxActions } from './Board.css';
 import { ErrorMessage, Title } from './Common.css';
-import { EventTypes } from '../types';
 
 const Board = () => {
   const [state, send] = useMachine(ticTacToeMachine);
@@ -24,6 +24,7 @@ const Board = () => {
               onClick={() => send({ type: EventTypes.PLAY, value: index })}
               key={index}
               player={state.context.board[index]}
+              isPlayingState={state.matches(GameStates.PLAYING)}
             />
           );
         })}
